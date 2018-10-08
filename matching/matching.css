@@ -1,0 +1,55 @@
+.matching-card {
+  display:grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 3fr;
+  grid-gap:0px;
+  width:400px;
+  box-shadow: 0 4px 12px 0px rgba(0,0,0,.25);
+  margin: 0 auto;
+}
+
+.matching-image {
+  grid-row: 1/2;
+  grid-gap: 0px;
+  width:100%;
+  padding:10px;
+}
+
+.matching-description {
+  grid-row: 2/3;
+  grid-gap: 0px;
+  padding:10px;  
+}  
+
+h3{
+  text-align: center;
+  margin-bottom: 10px;
+}
+.accept-deny{
+  grid-row: 3/4;
+  grid-gap: 0px;
+  padding:10px;
+  
+}
+.deny-button{
+  float:left;
+  border: none;
+  color:red;
+  font-size: 3.5em;
+  padding-left:20px;
+}
+.deny-button:hover{
+  color:red;
+  
+}
+.accept-button{
+  float:right;
+  border:hidden;
+  color:green;
+  font-size: 3.5em;
+  padding-right:20px;  
+}
+.accept-button:hover{
+  color:green;
+  
+}

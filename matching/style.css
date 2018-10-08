@@ -1,0 +1,11 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.card {
+    width: 200px;
+    height: 400px;
+    background: rgb(185, 185, 185);
+    margin: 0 auto;
+}

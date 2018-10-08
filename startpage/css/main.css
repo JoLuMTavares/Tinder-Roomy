@@ -1,0 +1,60 @@
+*{
+    font-family: Arial, Verdana;
+}
+
+.jumbotron{
+    background: transparent;
+}
+
+.fullscreen-bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+}
+
+p.lead.text-muted{   
+    background: rgba(223, 223, 235, 0.9);  
+    color: black;  
+}
+
+h1.jumbotron-heading{
+    font-size: 3.5rem;
+    color: rgb(25, 25, 27);
+}
+
+h1.jumbotron-heading span{
+    font-size: 3.0rem;
+    color: rgb(141, 141, 248);
+}
+.img-fluid{
+    border: 1px solid rgba(223, 223, 235, 0.9);
+    padding: 32px;
+    background: #fff;
+    -webkit-box-shadow: 1px 1px 7px 6px rgba(0,0,0,0.87); 
+    box-shadow: 1px 1px 7px 6px rgba(0,0,0,0.2);
+}
+
+.card-body h4, footer h6{
+    color: rgb(141, 141, 248);
+}
+
+
+footer{
+    margin: 10px;    
+}
+
+
+@media only screen and (max-width: 400px) {
+    h1.jumbotron-heading span{
+        font-size: 2.4rem;
+        color: rgb(141, 141, 248);
+    }
+
+    h1.jumbotron-heading{
+        font-size: 2.0rem;
+    }
+}

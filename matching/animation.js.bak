@@ -1,0 +1,59 @@
+$(document).ready(function() {
+    console.log('ready');
+});
+
+
+let cardIndex = 0;
+let cards = [
+    { name: 'Peter', description: 'some messy guy', img: 'peter.jpg'},
+    { name: 'Susi', description: 'some messy girl', img: 'susi.jpg'},
+    { name: 'Max', description: 'some nerdy guy', img: 'max.jpg'}
+];
+
+$(".cards").on('click', '.card .btn-nope', function() {
+    $(".card").animate({
+        'marginLeft': '-=300px',
+        opacity: '0.0',
+        height: '0px',
+        width: '0px'
+    }, 400, function() {
+        loadCard(nextCard());
+    });
+});
+
+$(".cards").on('click', '.card .btn-yep', function() {
+    $(".card").animate({
+        'marginLeft': '+=300px',
+        opacity: '0.0',
+        height: '0px',
+        width: '0px'
+    }, 400, function() {
+        loadCard(nextCard());
+    });
+});   
+
+function nextCard() {
+    if(cardIndex === cards.length - 1) {
+        cardIndex = 0;
+        return 0;
+    }
+    cardIndex++;
+    return cardIndex;
+}
+
+function loadCard(index) {
+    $('.cards').empty();
+    $('.cards').append(`
+        <div class="card">
+            <div>${cards[index].img}</div>
+            <div>${cards[index].name}</div>
+            <div>${cards[index].description}</div>
+            <div>
+                <button class="btn-nope">left</button>
+                <button class="btn-yep">right</button>
+            </div>
+        </div>
+    `);
+}
+
+loadCard(0);
